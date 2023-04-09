@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --clr-Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --clr-Soft-Pink: hsl(333, 80%, 67%);
+    --clr-Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --clr-Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --clr-White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    z-index: 10;
+    margin: auto;
+    background-color: var(--clr-White);
+    font-family: 'League Spartan', sans-serif;
+    height: 100vh;
+}
+
+body::before {
+    content: "";
+    background-image: url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -25%;
+    bottom: -3%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    background-image: url(../images/bg-pattern-top-desktop.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -50%;
+    left: -70.5%;
+    z-index: -1;
+}
+
+img {
+    border-radius: 50%;
+    width: 5rem;
+    margin-inline-end: 2rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.social-proof {
+    justify-content: space-around;
+    padding-block: 3rem;
+}
+
+.social-proof-text {
+    width: 50rem;
+}
+
+.social-proof-text h1 {
+    color: var(--clr-Very-Dark-Magenta);
+    font-size: 4.5rem;
+    line-height: 5rem;
+    font-weight: 900;
+    padding-bottom: 2rem;
+}
+
+.social-proof-text h1 span {
+    font-size: 5rem;
+}
+
+.ma {
+    margin-left: 5rem;
+}
+
+.m {
+    margin-left: 9rem;
+}
+
+.down {
+    margin-top: 3rem;
+}
+
+.downer {
+    margin-top: 8rem;
+}
+
+.social-proof-text p {
+    line-height: 2rem;
+    padding: 0 5rem 0 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--clr-Dark-Grayish-Magenta);
+}
+
+.social-proof-rating {
+    height: 20rem;
+    max-width: 50rem;
+    width: 100%;
+}
+
+.rating {
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    height: 5rem;
+    width: 40rem;
+    margin-block: 2rem;
+    background-color: var(--clr-Light-Grayish-Magenta);
+}
+
+.rating .star-emoji {
+    padding-inline-end: 2rem;
+}
+
+.rating span {
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.social-proof-testomial {
+    margin: 3rem 10rem;
+    gap: 3rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+.card {
+    color: var(--clr-White);
+    border-radius: 1rem;
+    padding: 3rem;
+    height: 23rem;
+    background-color: var(--clr-Very-Dark-Magenta);
+}
+
+.testomials p {
+    line-height: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.bold {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.span {
+    font-size: 1.5rem;
+    color: var(--clr-Soft-Pink);
+}
+
+
+@media (max-width: 378px) {
+
+    /* body {
+        
+    overflow: none;
+    } */
+    body::before {
+        background-image: url(../images/bg-pattern-bottom-mobile.svg);
+        right: 0;
+        bottom: -100%;
+    }
+    
+    body::after {
+        background-image: url(../images/bg-pattern-top-mobile.svg);
+        top: -67%;
+        left: -40.5%;
+        z-index: -1;
+    }
+
+    .social-proof {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-proof-text {
+        width: 30rem;
+    }
+
+    .social-proof-text h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .social-proof-text h1 span {
+        font-size: 4rem;
+    }
+    
+    .social-proof-text p {
+        line-height: 2rem;
+        font-size: 1.7rem;
+        padding: 1rem 2rem;
+    }
+
+    .social-proof-rating {
+        display: flex;
+        align-items: center;
+        height: 20rem;
+        max-width: 50rem;
+        width: 100%;
+        flex-direction: column;
+        
+    }
+
+    .rating {
+        height: 10rem;
+        width: 90%;
+        margin-block: 1rem;
+        margin-inline-start: 0px;
+    }
+
+    .rating .star-emoji {
+        display: block;
+    }
+
+    .social-proof-testomial {
+        gap: 1rem;
+        margin: 3rem 1rem;
+        grid-template-columns:  1fr;
+    }
+    
+    .card {
+        margin-top: 3rem;
+    }
+
+    .testomials p {
+        font-weight: 400;
+    }
+}
